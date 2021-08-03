@@ -18,7 +18,7 @@ const CompletedLogs = ({log:{completedlogs,loading},getCompletedLogs}) => {
   }
 
   return (
-    <ul className="collection with-header" style={{display:'grid',top:'30px',width:450,margin:'auto'}}>
+    <ul className="collection with-header" style={{display:'grid',top:'20px',marginBottom:'20px',maxWidth:350,margin:'auto'}}>
     <li className="collection-header">
       <h4 className="center">Completed logs</h4>
        

@@ -24,8 +24,8 @@ const MobileNav = () => {
     return (
      <div>
         
-    <nav className="nav-extended hide-on-large-only">
-    <div className="nav-wrapper blue">
+    <nav className="nav-extended hide-on-large-only blue" style={{width:'110%'}} >
+   
      
       
       <ul id="nav-mobile" className="" style={{display:'flex',justifyContent:'center'}}>
@@ -33,7 +33,7 @@ const MobileNav = () => {
         <li><Link to="/completedlogs">Completed logs</Link></li>
         <li><Link to="/techs">Techs</Link></li>
       </ul>
-    </div>
+
  
   </nav>
 

@@ -42,17 +42,20 @@ const LogItem = ({log,deleteLog,setCurrentLog,addCompletedLog}) => {
    
     return (
        <li className="collection-item">
-            <div className="center">
+            <div className="center" style={{}}>
                 <a href="#edit-log-modal" className={`modal-trigger ${log.attention ? 'red-text' : 'blue-text'}`} onClick={handleCurrentLog}>{message}</a>
                 <br/>
                 <span className="grey-text">
                     <span className="black-text">ID #{id} </span>
                     last updated by {" "}
                     <span className="black-text">{tech}</span> 
-                   <br/> {" "} <span style={{marginLeft:50}}>on</span> {" "} 
+                   <br/> {" "} <span style={{marginLeft:0}}>on</span> {" "} 
                      <Moment format='MMMM Do YYYY, h:mm:ss a'>{date}</Moment>
                 </span>
-                <a href="#!" className="secondary-content" onClick={handleDelete}>
+               
+                
+            </div>
+            <a href="#!" className="secondary-content" onClick={handleDelete}>
                     <i className='material-icons grey-text small'>delete_forever</i>
                    
                 </a>
@@ -61,8 +64,7 @@ const LogItem = ({log,deleteLog,setCurrentLog,addCompletedLog}) => {
                 <i className='material-icons grey-text small'>check</i>  
                    
                 </a>
-                
-            </div>
+
        </li>
     )
 }
