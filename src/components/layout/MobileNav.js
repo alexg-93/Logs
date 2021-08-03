@@ -24,7 +24,7 @@ const MobileNav = () => {
     return (
      <div>
         
-    <nav className="nav-extended hide-on-large-only blue" style={{width:'110%'}} >
+    <nav className="nav-extended hide-on-large-only blue" style={{width:'100%'}} >
    
      
       
