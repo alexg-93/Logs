@@ -38,5 +38,20 @@
         "id": 5
       }
     ],
-    "completedlogs": []
+    "completedlogs": [
+      {
+        "message": "TEST2",
+        "attention": true,
+        "tech": "Test tester",
+        "date": "2021-08-02T10:14:50.421Z",
+        "id": "c792338d"
+      },
+      {
+        "message": "TEST3",
+        "attention": true,
+        "tech": "Test tester",
+        "date": "2021-08-02T10:14:50.421Z",
+        "id": "c792338d"
+      }
+    ]
   }
