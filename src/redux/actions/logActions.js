@@ -1,7 +1,7 @@
 import { SEARCH_LOGS,GET_LOGS, SET_LOADING, LOGS_ERROR  , ADD_LOG,DELETE_LOG, SET_CURRENT, CLEAR_CURRENT,UPDATE_LOG} from "./types";
 import M from 'materialize-css/dist/js/materialize'
 
-const JSON_API = 'https://itloggs.herokuapp.com/'
+const JSON_API = 'https://itloggs.herokuapp.com/api'
 
 // Get logs from server
 export const getLogs = () => async dispatch => {

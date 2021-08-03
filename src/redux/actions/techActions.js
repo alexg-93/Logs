@@ -1,6 +1,6 @@
 import {ADD_TECH,GET_TECHS,TECHS_ERROR,DELETE_TECH,SET_LOADING,UPDATE_TECH,CLEAR_CURRENT_TECH,SET_CURRENT_TECH,SEARCH_TECHS} from "./types";
 import M from 'materialize-css/dist/js/materialize'
-const JSON_API = 'https://my-json-server.typicode.com/alexg-93/logsdb/'
+const JSON_API = 'https://itloggs.herokuapp.com/api'
 
 // Get techs from server
 export const getTechs = () => async dispatch => {
