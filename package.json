@@ -1,6 +1,6 @@
 {
   "name": "it-logger",
-  "homepage":"https://alexg-93/github.io/logs",
+  "homepage":"http://alexg-93/github.io/logs",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -26,8 +26,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
-    "json-server": "json-server --watch db.json --port 5000",
-    "dev": "concurrently \"npm start\" \"npm run json-server\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -51,9 +49,9 @@
     ]
   },
   "devDependencies": {
-    "concurrently": "^6.2.0",
-    "gh-pages": "^3.2.3",
-    "json-server": "^0.16.3"
-  },
-  "proxy": "http://localhost:5000"
+
+    "gh-pages": "^3.2.3"
+  
+  }
+
 }
