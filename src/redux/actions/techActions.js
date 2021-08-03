@@ -1,6 +1,6 @@
 import {ADD_TECH,GET_TECHS,TECHS_ERROR,DELETE_TECH,SET_LOADING,UPDATE_TECH,CLEAR_CURRENT_TECH,SET_CURRENT_TECH,SEARCH_TECHS} from "./types";
 import M from 'materialize-css/dist/js/materialize'
-
+const JSON_API = 'https://my-json-server.typicode.com/alexg-93/logsdb/'
 
 // Get techs from server
 export const getTechs = () => async dispatch => {
@@ -8,7 +8,7 @@ export const getTechs = () => async dispatch => {
     try {
         setLoading();
         
-        const res = await fetch('/techs');
+        const res = await fetch(`${JSON_API}/techs`);
         const data = await res.json();
 
         dispatch({
@@ -32,7 +32,7 @@ export const addTech = (tech) => async dispatch=>{
 
         setLoading();
 
-        const res = await fetch('/techs' , {
+        const res = await fetch(`${JSON_API}/techs` , {
             method: 'POST',
             body: JSON.stringify(tech),
             headers : {
@@ -64,7 +64,7 @@ export const deleteTech = (id) => async dispatch=>{
 
         setLoading(); //true
     
-        await fetch(`/techs/${id}`,{
+        await fetch(`${JSON_API}/techs/${id}`,{
             method: 'DELETE'
         });
      
@@ -90,7 +90,7 @@ export const updateTech = (tech) => async dispatch=>{
 
         setLoading(); //true
     
-        const res = await fetch(`/techs/${tech.id}`,{
+        const res = await fetch(`${JSON_API}/techs/${tech.id}`,{
             method: 'PATCH',
             body: JSON.stringify(tech),
             headers : {
@@ -148,7 +148,7 @@ export const searchTechs = (text) => async dispatch => {
     try {
         setLoading();
 
-        const res = await fetch(`/techs?q=${text}`);
+        const res = await fetch(`${JSON_API}/techs?q=${text}`);
         const data = await res.json();
       
         dispatch({

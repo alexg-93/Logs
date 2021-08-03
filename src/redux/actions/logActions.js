@@ -1,8 +1,13 @@
 import { SEARCH_LOGS,GET_LOGS, SET_LOADING, LOGS_ERROR  , ADD_LOG,DELETE_LOG, SET_CURRENT, CLEAR_CURRENT,UPDATE_LOG} from "./types";
 import M from 'materialize-css/dist/js/materialize'
 
+const JSON_API = 'https://my-json-server.typicode.com/alexg-93/logsdb/'
+
 // Get logs from server
 export const getLogs = () => async dispatch => {
+
+
+
 
     try {
         setLoading();
@@ -31,7 +36,7 @@ export const addLog = (log) => async dispatch=>{
 
         setLoading();
 
-        const res = await fetch('/logs' , {
+        const res = await fetch(`${JSON_API}/logs` , {
             method: 'POST',
             body: JSON.stringify(log),
             headers : {
@@ -60,7 +65,7 @@ export const deleteLog = (id) => async dispatch=>{
 
         setLoading(); //true
     
-        await fetch(`/logs/${id}`,{
+        await fetch(`${JSON_API}/logs/${id}`,{
             method: 'DELETE'
         });
      
@@ -87,7 +92,7 @@ export const updateLog = (log) => async dispatch=>{
 
         setLoading(); //true
     
-        const res = await fetch(`/logs/${log.id}`,{
+        const res = await fetch(`${JSON_API}/logs/${log.id}`,{
             method: 'PATCH',
             body: JSON.stringify(log),
             headers : {
@@ -120,7 +125,7 @@ export const searchLogs = (text) => async dispatch => {
     try {
         setLoading();
 
-        const res = await fetch(`/logs?q=${text}`);
+        const res = await fetch(`${JSON_API}/logs?q=${text}`);
         const data = await res.json();
        
         dispatch({
@@ -173,7 +178,7 @@ export const addCompletedLog = (log) => async dispatch=>{
 
         setLoading();
 
-        const res = await fetch('/completedlogs' , {
+        const res = await fetch(`${JSON_API}/completedlogs` , {
             method: 'POST',
             body: JSON.stringify(log),
             headers : {
@@ -201,7 +206,7 @@ export const getCompletedLogs = () => async dispatch => {
     try {
         setLoading();
 
-        const res = await fetch('/completedlogs');
+        const res = await fetch(`${JSON_API}/completedlogs`);
         const data = await res.json();
         console.log(data)
         dispatch({
