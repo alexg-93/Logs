@@ -7,12 +7,10 @@ const JSON_API = 'https://my-json-server.typicode.com/alexg-93/logsdb/'
 export const getLogs = () => async dispatch => {
 
 
-
-
     try {
         setLoading();
 
-        const res = await fetch('/logs');
+        const res = await fetch(`${JSON_API}/logs`);
         const data = await res.json();
 
         dispatch({
