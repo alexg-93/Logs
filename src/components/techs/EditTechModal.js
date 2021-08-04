@@ -34,7 +34,7 @@ const EditTechModal = ({updateTech,current}) => {
           id:current.id,
           firstName,
           lastName,
-          date: new Date()
+          date: new Date().toDateString()
         }
         updateTech(updatedTech)
         M.toast({html:'Tech Details updated'})
