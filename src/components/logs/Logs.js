@@ -6,12 +6,12 @@ import {getLogs} from '../../redux/actions/logActions'
 
 const Logs = ({log:{logs,loading},getLogs}) => {
 
+
  
   useEffect(() => {
     getLogs();
   }, []);
 
-  
 
   if (loading || logs ===null){
     return <PreLoader/>;
