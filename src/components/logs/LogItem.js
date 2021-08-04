@@ -26,19 +26,18 @@ const LogItem = ({log,deleteLog,setCurrentLog,addCompletedLog}) => {
     }
 
     const handleCompletedLog=()=>{
+       
+        // setCurrentLog(log)
+        // addCompletedLog(completedLog)
+
+        let completedLog={id:id,message:message,tech:tech,date:new Date()}
         //add the log to completed logs
-        setCurrentLog(log)
-        addCompletedLog(log)
+        addCompletedLog(completedLog)
         //delete checked log
-       deleteLog(id)
+         deleteLog(id)
     }
 
-     // const handleCompletedLog=()=>{
-    //     //add the log to completed logs
-    //     addCompletedLog(log)
-    //     //delete checked log
-    //     deleteLog(id)
-    // }
+  
    
     return (
        <li className="collection-item">
